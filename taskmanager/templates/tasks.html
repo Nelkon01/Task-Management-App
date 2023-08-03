@@ -2,5 +2,13 @@
 {% block content %}
 
 <h3 class="light-grey-text text-darken-4 center-align">Tasks</h3>
+<!--button to add tasks-->
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_task')}}" class="btn-large grey darken-2">
+           Add Task <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
 
 {% endblock %}
