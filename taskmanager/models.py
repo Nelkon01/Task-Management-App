@@ -9,7 +9,7 @@ class Category(db.Model):
 
     def __repr__(self):
         # __repr__ method to return a string representation of the model
-        return self
+        return self.category_name
 
 
 class Task(db.Model):
