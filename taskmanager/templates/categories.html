@@ -6,24 +6,24 @@
 <div class="row">
     <div class="col s12 center-align">
         <a href="{{ url_for('add_category')}}" class="btn-large grey darken-2">
-           Add Category <i class="fas fa-plus-square right"></i>
+            Add Category <i class="fas fa-plus-square right"></i>
         </a>
     </div>
 </div>
 
-  <div class="row">
-      {% for category in categories %}
+<div class="row">
+    {% for category in categories %}
     <div class="col s12 m6 l3">
-      <div class="card blue-grey darken-1 center-align">
-        <div class="card-content white-text">
-          <span class="card-title">{{ category.category_name }}</span>
+        <div class="card blue-grey darken-1 center-align">
+            <div class="card-content white-text">
+                <span class="card-title">{{ category.category_name }}</span>
+            </div>
+            <div class="card-action">
+                <a href="{{url_for('edit_category', category_id=category.id)}}" class="btn green accent">Edit</a>
+                <a href="{{url_for('delete_category', category_id=category.id)}}" class="btn red">Delete</a>
+            </div>
         </div>
-        <div class="card-action">
-          <a href="{{url_for('edit_category', category_id=category.id)}}" class="btn green accent">Edit</a>
-          <a href="{{url_for('delete_category', category_id=category.id)}}" class="btn red">Delete</a>
-        </div>
-      </div>
     </div>
-      {% endfor %}
-  </div>
+    {% endfor %}
+</div>
 {% endblock %}
